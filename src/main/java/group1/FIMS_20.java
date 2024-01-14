@@ -3,7 +3,7 @@
  * */
 package group1;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
 import org.junit.After;
@@ -46,9 +46,19 @@ public class FIMS_20 {
 
     @Test
     public void FIMS_20_100rows() throws InterruptedException {
+
         //click edit button (AUTS10800/222/24)
-        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
+        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[5]/td[9]/a[2]")).click();
         Thread.sleep(1000);
+
+        // Scroll down by 500 pixels
+        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,400)");
+        try {
+            Thread.sleep(750);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
         //click dropdown
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[3]/div[2]/div[1]/label/span/span[2]/span/span[2]")).click();
