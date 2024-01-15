@@ -1,6 +1,3 @@
-/*
-* Test case for Add Authorized Staff (1)
-* */
 package group1;
 
 import org.junit.After;
@@ -136,8 +133,8 @@ public class Alia_287784 {
 
     @Test
     public void FIMS_12_01_Search() throws InterruptedException {
-        //click edit button (AUTS10800/222/24)
-        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[5]/td[9]/a[2]")).click();
+        //click edit button (AUTS10800/266/24)
+        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
         // Scroll down by 500 pixels
@@ -167,8 +164,8 @@ public class Alia_287784 {
 
     @Test
     public void FIMS_12_02_Search() throws InterruptedException {
-        //click edit button (AUTS10800/222/24)
-        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[5]/td[9]/a[2]")).click();
+        //click edit button (AUTS10800/266/24)
+        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
         // Scroll down by 500 pixels
@@ -333,8 +330,8 @@ public class Alia_287784 {
 
     @Test
     public void FIMS_15_01_10rows() throws InterruptedException {
-        //click edit button (AUTS10800/222/24)
-        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[5]/td[9]/a[2]")).click();
+        //click edit button (AUTS10800/266/24)
+        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
         // Scroll down by 500 pixels
@@ -368,8 +365,8 @@ public class Alia_287784 {
 
     @Test
     public void FIMS_15_02_25rows() throws InterruptedException {
-        //click edit button (AUTS10800/222/24)
-        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[5]/td[9]/a[2]")).click();
+        //click edit button (AUTS10800/266/24)
+        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
         // Scroll down by 500 pixels
@@ -403,8 +400,8 @@ public class Alia_287784 {
 
     @Test
     public void FIMS_15_03_50rows() throws InterruptedException {
-        //click edit button (AUTS10800/222/24)
-        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[5]/td[9]/a[2]")).click();
+        //click edit button (AUTS10800/266/24)
+        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
         // Scroll down by 500 pixels
@@ -438,8 +435,8 @@ public class Alia_287784 {
 
     @Test
     public void FIMS_15_04_100rows() throws InterruptedException {
-        //click edit button (AUTS10800/222/24)
-        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[5]/td[9]/a[2]")).click();
+        //click edit button (AUTS10800/266/24)
+        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
         // Scroll down by 500 pixels
