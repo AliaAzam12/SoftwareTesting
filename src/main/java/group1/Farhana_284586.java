@@ -764,7 +764,7 @@ public class Farhana_284586 {
 
         System.out.println("\nAfter Test Case");
 
-        // Assuming the main dashboard has a specific URL
+        // Redirect to the main dashboard
         driver.get(" https://fimsclone.kerisi.my/index.php?a=NDg3PUFYWW5WV1BrRjJjb0oyYmhKSFptMFdadVZYU0Uxak13Y1RONTcz");
     }
 
