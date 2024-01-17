@@ -109,12 +109,12 @@ public class Chan_286596 {
             // Click on the "Staff" search bar arrow
             WebElement staffSearchArrow = driver.findElement(By.cssSelector("span.select2-selection__arrow"));
             staffSearchArrow.click();
-            Thread.sleep(1000);
+            Thread.sleep(2000);
 
             // Input "1478" into the "Staff" search bar
             WebElement staffSearchInput = driver.findElement(By.cssSelector("input.select2-search__field"));
             staffSearchInput.sendKeys("Nor Laily Binti Hashim");
-            Thread.sleep(1000);
+            Thread.sleep(2000);
 
             // Wait for the result to appear
             List<WebElement> results = driver.findElements(By.cssSelector("li.select2-results__option"));
@@ -122,7 +122,7 @@ public class Chan_286596 {
             // Click on the first result if available
             if (!results.isEmpty()) {
                 results.get(0).click();
-                Thread.sleep(1000);
+                Thread.sleep(2000);
             }
 
             // Click on the "OK" button (Assuming it's a button, please update the selector accordingly)
