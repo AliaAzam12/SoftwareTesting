@@ -112,6 +112,21 @@ public class Farhana_284586 {
         System.out.println("Select Stor Alat Tulis");
         Thread.sleep(2000);
 
+        // Get the value from the store field
+        String actualValue = driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[1]/span/span[2]/span/span[1]")).getText();
+
+        // Get the value from the PTJ field
+        String expectedValue = driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/input")).getAttribute("value");
+
+        // Use an assertion to verify that both actual and expected values are not empty
+        Assert.assertTrue("The store field is empty", !actualValue.isEmpty());
+        Assert.assertTrue("The PTJ field is empty", !expectedValue.isEmpty());
+
+        System.out.println("Store field and PTJ field is not empty" +
+                "\nStore field: " + actualValue +
+                "\nPTJ field: " + expectedValue);
+        Thread.sleep(2000);
+
         // Click Search button
         driver.findElement(By.id("searchbtn")).click();
         System.out.println("Click Search Button");
@@ -146,13 +161,12 @@ public class Farhana_284586 {
         // Define expected string output
         String expectedValue = "Compulsory";
 
-        System.out.println("Actual Error Message is same with Expected Error Message" +
-                "\nActual Value:" + actualValue +
-                "\nExpected Value:" + expectedValue);
-        Thread.sleep(2000);
-
         // Assert to verify whether Expected Value is equal to Actual Value
         Assert.assertEquals("Error message is not same", expectedValue, actualValue);
+
+        System.out.println("Actual Error Message is same with Expected Error Message" +
+                "\nActual Value: " + actualValue +
+                "\nExpected Value: " + expectedValue);
         Thread.sleep(2000);
 
         System.out.println("Test 2 success");
@@ -307,13 +321,13 @@ public class Farhana_284586 {
         String expectedValue2 = "Min 1";
         String expectedErrMessage = expectedValue1 + expectedValue2;
 
+        // Assert to verify whether Expected Value is equal to Actual Value
+        Assert.assertEquals("Error message is not same", actualErrMessage, expectedErrMessage);
+        Thread.sleep(2000);
+
         System.out.println("Actual Error Message is same with Expected Error Message" +
                 "\nActual Value 1: " + actualValue1 + ", Actual Value 2: " + actualValue2 +
                 "\nExpected Value 1: " + expectedValue1 + ", Expected Value 2: " + expectedValue2);
-        Thread.sleep(2000);
-
-        // Assert to verify whether Expected Value is equal to Actual Value
-        Assert.assertEquals("Error message is not same", actualErrMessage, expectedErrMessage);
         Thread.sleep(2000);
 
         System.out.println("Test 4 success");
@@ -528,16 +542,18 @@ public class Farhana_284586 {
         // Define expected string output, delete pen-hitam
         String expectedValue = "Information was successfully deleted.";
 
+        // Assert to verify whether Expected Value is equal to Actual Value
+        Assert.assertEquals("Delete process failed", expectedValue, actualValue);
+
         System.out.println("Actual Message is same with Expected Message" +
-                "\nActual Message: " + actualValue + "\nExpected Message: " + expectedValue);
+                "\nActual Message: " + actualValue +
+                "\nExpected Message: " + expectedValue);
+        Thread.sleep(2000);
 
         // Click Ok button
         driver.findElement(By.xpath("/html/body/div[18]/div/div/div[3]/button")).click();
         System.out.println("Click Ok button");
         Thread.sleep(2000);
-
-        // Assert to verify whether Expected Value is equal to Actual Value
-        Assert.assertEquals("Different item deleted", expectedValue, actualValue);
 
         System.out.println("Test 7 success");
     }
@@ -639,7 +655,8 @@ public class Farhana_284586 {
         Thread.sleep(2000);
 
         // Extract text from the modal-body element
-        String modalText = driver.findElement(By.xpath("/html/body/div[18]/div/div/div[2]")).getText();
+        String modalText = driver.findElement(By.cssSelector("#modalAlert > div > div > div.modal-body")).getText();
+        ///html/body/div[18]/div/div/div[2]
 
         // Split the text based on the period (.)
         String[] message = modalText.split("\\.");
@@ -650,12 +667,13 @@ public class Farhana_284586 {
         // Define expected string output
         String expectedValueMsg = "Information was successfully been processed";
 
-        System.out.println("Actual Message is same with Expected Message" +
-                "\nActual Message:" + actualValueMsg +
-                "\nExpected Message:" + expectedValueMsg);
-
         // Assert to verify whether Expected Value is equal to Actual Value
         Assert.assertEquals("The actual message does not match the expected message", expectedValueMsg.trim(), actualValueMsg);
+
+        System.out.println("Actual Message is same with Expected Message" +
+                "\nActual Message: " + actualValueMsg +
+                "\nExpected Message: " + expectedValueMsg);
+        Thread.sleep(2000);
 
         // Click Ok button
         driver.findElement(By.cssSelector("#modalAlert > div > div > div.modal-footer > button")).click();
@@ -711,17 +729,17 @@ public class Farhana_284586 {
         // Define expected string output
         String expectedValue = "Please add 1 or more store item before proceed";
 
+        // Assert to verify whether Expected Value is equal to Actual Value
+        Assert.assertEquals("Error message is not same", expectedValue, actualValue);
+
         System.out.println("Actual Message is same with Expected Message" +
                 "\nActual Message: " + actualValue +
                 "\nExpected Message: " + expectedValue);
+        Thread.sleep(2000);
 
         // Click Ok button
         driver.findElement(By.xpath("/html/body/div[18]/div/div/div[3]/button")).click();
         System.out.println("Click Ok button");
-        Thread.sleep(2000);
-
-        // Assert to verify whether Expected Value is equal to Actual Value
-        Assert.assertEquals("Error message is not same", expectedValue, actualValue);
         Thread.sleep(2000);
 
         System.out.println("Test 9 success");
@@ -750,7 +768,9 @@ public class Farhana_284586 {
         // 2 section will appear after click view button
         WebElement prompt = driver.findElement(By.className("cardHeader"));
 
+        // Assert to verify whether the sections are displayed
         assertTrue("Store's Item and Application Status section is not displayed", prompt.isDisplayed());
+
         System.out.println("Store's Item and Application Status section displayed");
         Thread.sleep(2000);
 
