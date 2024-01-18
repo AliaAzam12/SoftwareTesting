@@ -27,8 +27,8 @@ public class Farhana_284586 {
     static WebDriver driver; // Declaring WebDriver instance
 
     /* Before class, open edge browser,
-     ** locate the FIMS website and login using ENTRY1 and password qwertyuiop
-     */
+    ** locate the FIMS website and login using ENTRY1 and password qwertyuiop
+    */
     @BeforeClass
     public static void beforeClass() throws InterruptedException {
 
@@ -56,8 +56,8 @@ public class Farhana_284586 {
 
 
     /* Before each test cases, navigate to the menu:
-     ** Menu > Portal > Stock Application
-     */
+    ** Menu > Portal > Stock Application
+    */
     @Before
     public void before() throws InterruptedException {
         System.out.println("\nBefore Test Case");
@@ -84,8 +84,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 1 : FIMS_41 : Insert Store Field
-     ** Menu > Portal > Stock Application > New Application
-     */
+    ** Menu > Portal > Stock Application > New Application
+    */
     //@Ignore
     @Test
     public void FIMS_41() throws InterruptedException {
@@ -137,8 +137,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 2 : FIMS_42 : Insert Store Field with No Input
-     ** Menu > Portal > Stock Application > New Application
-     */
+    ** Menu > Portal > Stock Application > New Application
+    */
     //@Ignore
     @Test
     public void FIMS_42() throws InterruptedException {
@@ -174,8 +174,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 3 : FIMS_43 : Add New Item to Store
-     ** Menu > Portal > Stock Application > New Application
-     */
+    ** Menu > Portal > Stock Application > New Application
+    */
     //@Ignore
     @Test
     public void FIMS_43() throws InterruptedException {
@@ -268,8 +268,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 4 : FIMS_44 : Add New Item to Store with No Input
-     ** Menu > Portal > Stock Application > New Application
-     */
+    ** Menu > Portal > Stock Application > New Application
+    */
     //@Ignore
     @Test
     public void FIMS_44() throws InterruptedException {
@@ -335,7 +335,7 @@ public class Farhana_284586 {
 
 
     /* Test Case 5 : FIMS_45 : Search Item
-     * Menu > Portal > Stock Application > New Application
+    ** Menu > Portal > Stock Application > New Application
     */
     //@Ignore
     @Test
@@ -399,7 +399,7 @@ public class Farhana_284586 {
 
 
     /* Test Case 6 : FIMS_46 : Edit Store Item
-     * Menu > Portal > Stock Application > New Application
+    ** Menu > Portal > Stock Application > New Application
     */
     //@Ignore
     @Test
@@ -493,7 +493,7 @@ public class Farhana_284586 {
 
 
     /* Test Case 7 : FIMS_47 : Delete Store Item
-     * Menu > Portal > Stock Application > New Application
+    ** Menu > Portal > Stock Application > New Application
     */
     //@Ignore
     @Test
@@ -560,7 +560,7 @@ public class Farhana_284586 {
 
 
     /* Test Case 8 : FIMS_48 : Save and Submit Store Item
-     * Menu > Portal > Stock Application > New Application
+    ** Menu > Portal > Stock Application > New Application
     */
     //@Ignore
     @Test
@@ -685,7 +685,7 @@ public class Farhana_284586 {
 
 
     /* Test Case 9 : FIMS_49 : Save and Submit Store Item with No Item
-     * Menu > Portal > Stock Application > New Application
+    ** Menu > Portal > Stock Application > New Application
     */
     //@Ignore
     @Test
@@ -747,7 +747,7 @@ public class Farhana_284586 {
 
 
     /* Test Case 10 : FIMS_50 : View Store Item and Application Details
-     * Menu > Portal > Stock Application > List of Application
+    ** Menu > Portal > Stock Application > List of Application
     */
     //@Ignore
     @Test
