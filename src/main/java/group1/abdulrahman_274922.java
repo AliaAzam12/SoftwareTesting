@@ -1,4 +1,5 @@
-package org.example;
+package group1;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.junit.After;
