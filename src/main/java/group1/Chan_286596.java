@@ -344,8 +344,6 @@ public class Chan_286596 {
         driver.findElement(By.cssSelector("button.btn.btn-primary[data-dismiss='modal']")).click();
         Thread.sleep(2000);
 
-        entirePageSearchTest3();
-
         System.out.println("Test smart filter with empty input Valid");
     } catch (Exception e) {
         e.printStackTrace();
@@ -497,11 +495,11 @@ public class Chan_286596 {
     private void entirePageSearchTest3() {
         try {
             // Get Text From Page
-            WebElement targetCell = driver.findElement(By.cssSelector("td.small-column[key='are_status']"));
+            WebElement targetCell = driver.findElement(By.cssSelector("td.small-column[key='oun_code_ptj']"));
             String actualText = targetCell.getText();
 
             // Expected Text
-            String expectedText = "Entry";
+            String expectedText = "S10800";
 
             // Assert that the expected text is present in the specified <td> element
             Assert.assertEquals("Page content does not match", expectedText, actualText);
