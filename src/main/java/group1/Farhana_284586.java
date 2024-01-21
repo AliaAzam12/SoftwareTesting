@@ -18,13 +18,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Farhana_284586 {
-    static WebDriver driver; // Declaring WebDriver instance
+    static ChromeDriver driver = new ChromeDriver();
 
     @BeforeClass
     public static void beforeClass() throws InterruptedException {
         System.out.println("Before Class");
         System.setProperty("webdriver.chrome.driver", "C:\\Selenium webdriver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-        driver = new ChromeDriver(); // Initialize WebDriver
+
+        driver.manage().window().maximize();
 
         driver.get("https://fimsclone.kerisi.my/"); // Open website
         System.out.println(driver.getTitle());
