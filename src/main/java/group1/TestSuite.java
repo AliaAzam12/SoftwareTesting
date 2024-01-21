@@ -7,6 +7,9 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({
         Alia_287784.class,
+        abdulrahman_274922.class,
+        Chan_286596.class,
+        Farhana_284586.class
 })
 
 public class TestSuite {
