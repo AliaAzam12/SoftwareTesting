@@ -1,4 +1,5 @@
-package org.example;
+package group1;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.junit.After;
@@ -197,10 +198,8 @@ public class abdulrahman_274922 {
         driver.findElement(By.xpath("/html/body/span/span/span[1]/input")).click();
         Thread.sleep(3000);
 
-
         driver.findElement(By.xpath("/html/body/span/span/span[1]/input")).sendKeys("SINTOK UTARA ENTERPRISE");
         Thread.sleep(3000);
-
 
         driver.findElement(By.xpath("/html/body/span/span/span[2]/ul/li")).click();
         Thread.sleep(3000);
@@ -209,25 +208,29 @@ public class abdulrahman_274922 {
 
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[8]/span/span[2]/span/span[1]")).click();
         Thread.sleep(5000);
-//        driver.findElement(By.xpath("/html/body/span/span/span[1]/input")).sendKeys("IVD001370/23");
-        // Thread.sleep(2000);
-
 
         driver.findElement(By.xpath("/html/body/span/span/span[2]/ul/li[38]")).click();
         Thread.sleep(5000);
 
         //click save button
-
         driver.findElement(By.xpath("//*[@id=\"invoiceId\"]")).click();
+        Thread.sleep(3000);
+        String ActualTitle = driver.findElement(By.xpath("//*[@id=\"modalAlert\"]/div/div/div[2]")).getText();
+
+        //click okay button
+        driver.findElement(By.xpath("//*[@id=\"modalAlert\"]/div/div/div[3]/button")).click();
         Thread.sleep(3000);
 
 
+        String ExpectedTitle = "Information was successfully saved.";
+
+        // Assert to verify if test case is successful
+        Assert.assertEquals("The test passed",ExpectedTitle, ActualTitle);
 
         System.out.println("Test Case successful");
         Thread.sleep(2000);
 
-        driver.quit();
-        Thread.sleep(5000);
+
 
     }
 
@@ -235,7 +238,6 @@ public class abdulrahman_274922 {
     @Test
     public void FIMS_24() throws InterruptedException {
         // TODO Auto-generated method stub
-
 
         driver.get("https://fimsclone.kerisi.my/");
         Thread.sleep(1000);
@@ -259,40 +261,28 @@ public class abdulrahman_274922 {
         driver.findElement(By.linkText("Discount Note")).click();
         Thread.sleep(1000);
 
-
-
-
         //click +New button 1
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[3]/a")).click();
         Thread.sleep(3000);
 
-
-
-
-
         //click save button
-
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[7]/div/div/button[2]")).click();
         Thread.sleep(3000);
+        //  Get Text From Page
+         String ActualTitle = driver.findElement(By.xpath("//*[@id=\"modalAlert\"]/div/div/div[2]")).getText();
+        //click okay button
+        driver.findElement(By.xpath("//*[@id=\"modalAlert\"]/div/div/div[3]/button")).click();
+        Thread.sleep(3000);
 
-//
-//        // Get Text From Page
-//        String ActualTitle = driver.findElement(By.xpath("/html/body/div[22]/div/div/div[2]")).getText();
-//
-//
-//        System.out.println(ActualTitle);
-//        // Expected Title
-//        String ExpectedTitle = "Application failed to be summited";
-//
-//        // Assert to verify if test case is successful
-//        Assert.assertEquals("The test passed",ExpectedTitle, ActualTitle);
+        // Expected Title
+         String ExpectedTitle = "Application failed to be summited";
 
-
+         // Assert to verify if test case is successful
+         Assert.assertEquals("The test passed",ExpectedTitle, ActualTitle);
 
         System.out.println("Test Case for add successful");
 
-        driver.quit();
-        Thread.sleep(5000);
+
     }
 
    // Table 25: Test case edit Discount Note Form
@@ -337,7 +327,6 @@ public class abdulrahman_274922 {
 
 
         // update Discount Note
-
         driver.findElement(By.xpath("//*[@id=\"txtAreaDesc\"]")).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[10]/textarea")).sendKeys("New Discount");
@@ -347,43 +336,22 @@ public class abdulrahman_274922 {
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[7]/div/div/button[2]")).click();
         Thread.sleep(1500);
 
-
-        try {
-            Alert alert = driver.switchTo().alert();
-            // Get text from the alert
-            String alertText = alert.getText();
-            System.out.println("Alert Text: " + alertText);
-
-            // Perform assertions or other actions based on the alert text
-            // Assert.assertEquals("Information was successfully saved.", alertText);
-
-            // Accept the alert (click the "OK" button)
-            alert.accept();
-        } catch (Exception e) {
-            // Handle NoAlertPresentException or other exceptions
-            System.out.println("No alert found or other exception occurred: " + e.getMessage());
-        }
-
         // Get Text From Page
-        //String ActualTitle = driver.findElement(By.xpath("/html/body/div[22]/div/div/div[2]")).getText();
-//
-//
-//    System.out.println(ActualTitle);
-//    // Expected Title
-//    String ExpectedTitle = "Information was successfully saved.\r\n"
-//    		+ "";
-//
-//    // Assert to verify if test case is successful
-//    Assert.assertEquals("The test passed",ExpectedTitle, ActualTitle);
+        String ActualTitle = driver.findElement(By.xpath("//*[@id=\"modalAlert\"]/div/div/div[2]")).getText();
 
-//    //click save button
-//    driver.findElement(By.xpath("/html/body/div[4]/form/div/div[7]/div/div/button[2]")).click();
-//    Thread.sleep(1000);
+        //click okay button
+        driver.findElement(By.xpath("//*[@id=\"modalAlert\"]/div/div/div[3]/button")).click();
+        Thread.sleep(3000);
+
+         System.out.println(ActualTitle);
+        // Expected Title
+        String ExpectedTitle = "Information was successfully saved.";
+
+       // Assert to verify if test case is successful
+       Assert.assertEquals("The test passed",ExpectedTitle, ActualTitle);
+
 
         System.out.println("Test Case for edit successful");
-
-        driver.quit();
-        Thread.sleep(5000);
 
     }
     //Table 26: Test case for search in Discount Note (1)
@@ -458,8 +426,8 @@ public class abdulrahman_274922 {
         login("ENTRY3", "qwertyuiop");
         navigateToAccountReceivablePage();
         navigateToDiscountNotePage();
-        searchDiscountNoteRecord("D46279");
-        verifySearchResults("D46279");
+        searchDiscountNoteRecord("xxx");
+        verifySearchResults("No records");
     }
 
     private void navigateToLoginPage() throws InterruptedException {
@@ -504,16 +472,15 @@ public class abdulrahman_274922 {
     }
 
     private void verifySearchResults(String expectedTitle) throws InterruptedException{
-        String actualTitle = driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[4]/span")).getText();
+        String actualTitle = driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr/td/a")).getText();
 
         // Assert to verify if the test case is successful
         Assert.assertEquals("The test passed", expectedTitle, actualTitle);
 
-        System.out.println("Test Case for Search successful");
+        System.out.println("Test Case for Search not found, successful");
         sleep(5000);
 
-        driver.quit();
-        Thread.sleep(5000);
+
     }
 
 //Table 28: Test case download documents for Discount Note(1)
@@ -569,25 +536,29 @@ public class abdulrahman_274922 {
     }
 
     private void click_dowloand_button3() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[3]/div[2]")).click();
-        sleep(1000);
+       //click on download document button
+         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[3]/div[2]")).click();
+         sleep(1000);
 
-        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[3]/div[1]")).click();
-        sleep(1000);
+         String main_window = driver.getWindowHandle();
+         sleep(3000);
+         driver.switchTo().window(main_window);
+         sleep(2000);
 
-//    	String actualMessage = driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr/td/a")).getText();
-//
-//        // Expected Message
-//        String expectedMessage = "No records";
-//
-//        // Assert to verify if the test case is successful
-//        Assert.assertEquals("The test passed", expectedMessage, actualMessage);
+
+    	String actualMessage = driver.findElement(By.xpath("//*[@id=\"breadcrumbs\"]")).getText();
+
+        System.out.println(actualMessage);
+        // Expected Message
+        String expectedMessage = "Account Receivable / Discount Note";
+
+        // Assert to verify if the test case is successful
+        Assert.assertEquals("The test passed", expectedMessage, actualMessage);
 
         System.out.println("Test Case successful");
         sleep(5000);
 
-        driver.quit();
-        Thread.sleep(5000);
+
     }
 
     @Test
@@ -602,15 +573,28 @@ public class abdulrahman_274922 {
 
     private void click_dowloand_DC1() throws InterruptedException {
 
-
+        // click on download Dc Summary Report
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[3]/div[1]")).click();
         sleep(1000);
 
+
+        String main_window = driver.getWindowHandle();
+        sleep(3000);
+        driver.switchTo().window(main_window);
+        sleep(2000);
+
+
+        String actualMessage = driver.findElement(By.xpath("//*[@id=\"breadcrumbs\"]")).getText();
+
+        System.out.println(actualMessage);
+        // Expected Message
+        String expectedMessage = "Account Receivable / Discount Note";
+
+        // Assert to verify if the test case is successful
+        Assert.assertEquals("The test passed", expectedMessage, actualMessage);
+
         System.out.println("Test Case successful");
         sleep(5000);
-
-        driver.quit();
-        Thread.sleep(5000);
     }
 
     //Table 29: Test case download documents for Discount Note(2)
@@ -668,20 +652,21 @@ public class abdulrahman_274922 {
 
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[3]/div[1]")).click();
         sleep(1000);
+        // get actualMessage
+        String actualMessage = driver.findElement(By.xpath("//*[@id=\"modalAlert\"]/div/div/div[2]")).getText();
+        //click okay button
+        driver.findElement(By.xpath("//*[@id=\"modalAlert\"]/div/div/div[3]/button")).click();
+        sleep(1000);
 
-//    	String actualMessage = driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr/td/a")).getText();
-//
-//        // Expected Message
-//        String expectedMessage = "No records";
-//
-//        // Assert to verify if the test case is successful
-//        Assert.assertEquals("The test passed", expectedMessage, actualMessage);
+        // Expected Message
+        String expectedMessage = "Please select at least 1 record to download.";
+
+        // Assert to verify if the test case is successful
+        Assert.assertEquals("The test passed", expectedMessage, actualMessage);
 
         System.out.println("Test Case successful");
         sleep(5000);
 
-        driver.quit();
-        Thread.sleep(5000);
     }
 
     @Test
@@ -699,11 +684,20 @@ public class abdulrahman_274922 {
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[3]/div[1]")).click();
         sleep(1000);
 
+        // get actualMessage
+        String actualMessage = driver.findElement(By.xpath("//*[@id=\"modalAlert\"]/div/div/div[2]")).getText();
+        //click okay button
+        driver.findElement(By.xpath("//*[@id=\"modalAlert\"]/div/div/div[3]/button")).click();
+        sleep(1000);
+
+        // Expected Message
+        String expectedMessage = "Please select at least 1 record to download.";
+
+        // Assert to verify if the test case is successful
+        Assert.assertEquals("The test passed", expectedMessage, actualMessage);
+
         System.out.println("Test Case successful");
         sleep(5000);
-
-        driver.quit();
-        Thread.sleep(5000);
     }
 
 //Table 30: Test case Test view Discount Note data
@@ -759,12 +753,12 @@ public class abdulrahman_274922 {
     private void check_test_case5() throws InterruptedException {
 
 
-//    	 String ActualTitle = driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[1]/input")).getAttribute("value");
-//        // Expected Message
-//       String expectedMessage = "DCR00379/22";
-////
-//      // Assert to verify if the test case is successful
-//        Assert.assertEquals("The test passed", expectedMessage, ActualTitle);
+    	 String ActualTitle = driver.findElement(By.xpath("//*[@id=\"frm2DcNote\"]/div[1]")).getText();
+        // Expected Message
+       String expectedMessage = "Discount Note Head";
+//
+      // Assert to verify if the test case is successful
+        Assert.assertEquals("The test passed", expectedMessage, ActualTitle);
 
         System.out.println("Test Case successful");
         sleep(5000);
