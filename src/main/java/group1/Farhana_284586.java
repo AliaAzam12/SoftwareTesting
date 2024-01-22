@@ -21,17 +21,12 @@ import java.util.concurrent.TimeUnit;
 
 public class Farhana_284586 {
 
-    //static ChromeDriver driver = new ChromeDriver();
-
-    static WebDriver driver; // Declaring WebDriver instance
+    static ChromeDriver driver = new ChromeDriver();
 
     @BeforeClass
     public static void beforeClass() throws InterruptedException {
         System.out.println("Before Class");
-        //System.setProperty("webdriver.chrome.driver", "C:\\Selenium webdriver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-
-        System.setProperty("webdriver.edge.driver", "C:\\Users\\User\\Desktop\\SOFTWARE TESTING\\PROJECT\\EdgeDriver\\msedgedriver.exe");
-        driver = new EdgeDriver(); // Initialize WebDriver
+        System.setProperty("webdriver.chrome.driver", "C:\\Selenium webdriver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 
         driver.manage().window().maximize();
 
