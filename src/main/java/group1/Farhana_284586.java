@@ -11,6 +11,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.assertTrue;
 
@@ -18,12 +20,18 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Farhana_284586 {
+
     static ChromeDriver driver = new ChromeDriver();
+
+    //static WebDriver driver; // Declaring WebDriver instance
 
     @BeforeClass
     public static void beforeClass() throws InterruptedException {
         System.out.println("Before Class");
         System.setProperty("webdriver.chrome.driver", "C:\\Selenium webdriver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+
+        //System.setProperty("webdriver.edge.driver", "C:\\Users\\User\\Desktop\\SOFTWARE TESTING\\PROJECT\\EdgeDriver\\msedgedriver.exe");
+        //driver = new EdgeDriver(); // Initialize WebDriver
 
         driver.manage().window().maximize();
 
@@ -55,10 +63,15 @@ public class Farhana_284586 {
 
         driver.navigate().refresh();
 
-        // Select Menu navigator
-        driver.findElement(By.xpath("/html/body/div[1]/div[1]/a[2]")).click();
-        System.out.println("Menu");
-        Thread.sleep(2000);
+//        // Select Menu navigator
+//        driver.findElement(By.xpath("/html/body/div[1]/div[1]/a[2]")).click();
+//        System.out.println("Menu");
+//        Thread.sleep(2000);
+
+//        // Select Menu navigator
+//        driver.findElement(By.xpath("/html/body/div[1]/div[1]/a[2]")).click();
+//        System.out.println("Menu");
+//        Thread.sleep(2000);
 
         // Select Portal Menu
         driver.findElement(By.id("menu_id_1533")).click();
@@ -84,14 +97,21 @@ public class Farhana_284586 {
         System.out.println("\nTest 1 : Insert Store Field");
 
         // Select New Application in the submenu
-        driver.findElement(By.id("menu_id_2868")).click();
+        driver.findElement(By.id("menu_id_2867")).click();
         System.out.println("New Application Menu");
-        Thread.sleep(2000);
+        Thread.sleep(5000);
 
         // Click Store field
-        driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[1]/span/span[2]/span")).click();
+        //WebElement element = driver.findElement(By.cssSelector("#inputArea_sma_store_code > span > span.selection > span"));
+        //element.click();
+        driver.findElement(By.xpath("//*[@id=\"inputArea_sma_store_code\"]/span/span[2]/span")).click();
         System.out.println("Click Store Field");
         Thread.sleep(2000);
+
+//        WebDriverWait wait = new WebDriverWait(driver, 100);
+//        WebElement storeField = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#inputArea_sma_store_code > span > span.selection > span")));
+//        storeField.click();
+
 
         // Input Store field
         driver.findElement(By.xpath("/html/body/span/span/span[1]/input")).sendKeys("Stor");
