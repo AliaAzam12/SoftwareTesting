@@ -46,7 +46,7 @@ public class Alia_287784 {
 
     //Test case for Add .....
     @Test
-    public void FIMS_11_01_Add() throws InterruptedException {
+    public void FIMS_11() throws InterruptedException {
         //click +New button 1
         driver.findElement(By.xpath("//*[@id=\"dt_listing_container\"]/div[3]/a")).click();
         Thread.sleep(1000);
@@ -98,7 +98,7 @@ public class Alia_287784 {
     }
 
     @Test
-    public void FIMS_11_02_Add() throws InterruptedException {
+    public void FIMS_12() throws InterruptedException {
         //click +New button 1
         driver.findElement(By.xpath("//*[@id=\"dt_listing_container\"]/div[3]/a")).click();
         Thread.sleep(1000);
@@ -133,8 +133,8 @@ public class Alia_287784 {
     }
 
     @Test
-    public void FIMS_12_01_Search() throws InterruptedException {
-        //click edit button (AUTS10800/475/24)
+    public void FIMS_13() throws InterruptedException {
+        //click edit button (AUTS10800/499/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -164,8 +164,8 @@ public class Alia_287784 {
     }
 
     @Test
-    public void FIMS_12_02_Search() throws InterruptedException {
-        //click edit button (AUTS10800/475/24)
+    public void FIMS_14() throws InterruptedException {
+        //click edit button (AUTS10800/499/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -195,7 +195,7 @@ public class Alia_287784 {
     }
 
     @Test
-    public void FIMS_13_01_Edit() throws InterruptedException {
+    public void FIMS_15() throws InterruptedException {
         //click +New button 1
         driver.findElement(By.xpath("//*[@id=\"dt_listing_container\"]/div[3]/a")).click();
         Thread.sleep(1000);
@@ -271,7 +271,7 @@ public class Alia_287784 {
     }
 
     @Test
-    public void FIMS_14_01_Delete() throws InterruptedException {
+    public void FIMS_16() throws InterruptedException {
         //click +New button 1
         driver.findElement(By.xpath("//*[@id=\"dt_listing_container\"]/div[3]/a")).click();
         Thread.sleep(1000);
@@ -330,8 +330,8 @@ public class Alia_287784 {
     }
 
     @Test
-    public void FIMS_15_01_10rows() throws InterruptedException {
-        //click edit button (AUTS10800/475/24)
+    public void FIMS_17() throws InterruptedException {
+        //click edit button (AUTS10800/499/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -365,8 +365,8 @@ public class Alia_287784 {
     }
 
     @Test
-    public void FIMS_15_02_25rows() throws InterruptedException {
-        //click edit button (AUTS10800/475/24)
+    public void FIMS_18() throws InterruptedException {
+        //click edit button (AUTS10800/499/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -400,8 +400,8 @@ public class Alia_287784 {
     }
 
     @Test
-    public void FIMS_15_03_50rows() throws InterruptedException {
-        //click edit button (AUTS10800/475/24)
+    public void FIMS_19() throws InterruptedException {
+        //click edit button (AUTS10800/499/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -435,8 +435,8 @@ public class Alia_287784 {
     }
 
     @Test
-    public void FIMS_15_04_100rows() throws InterruptedException {
-        //click edit button (AUTS10800/475/24)
+    public void FIMS_20() throws InterruptedException {
+        //click edit button (AUTS10800/499/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
