@@ -44,7 +44,7 @@ public class Alia_287784 {
         Thread.sleep(1000);
     }
 
-    //Test case for Add .....
+    //Test case for Add Authorized Staff (1)
     @Test
     public void FIMS_11() throws InterruptedException {
         //click +New button 1
@@ -97,6 +97,7 @@ public class Alia_287784 {
 
     }
 
+    //Test case for Add Authorized Staff (2)
     @Test
     public void FIMS_12() throws InterruptedException {
         //click +New button 1
@@ -132,9 +133,11 @@ public class Alia_287784 {
         System.out.println("Test Case for Add is Incorrect");
     }
 
+
+    //Test case for Search Authorized Staff (1)
     @Test
     public void FIMS_13() throws InterruptedException {
-        //click edit button (AUTS10800/508/24)
+        //click edit button (AUTS10800/517/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -163,9 +166,11 @@ public class Alia_287784 {
         System.out.println("Test Case for Search successful");
     }
 
+
+    //Test case for Search Authorized Staff (2)
     @Test
     public void FIMS_14() throws InterruptedException {
-        //click edit button (AUTS10800/508/24)
+        //click edit button (AUTS10800/517/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -194,6 +199,8 @@ public class Alia_287784 {
         System.out.println("Test Case for Search not found");
     }
 
+
+    //Test case for Edit Authorized Staff (1)
     @Test
     public void FIMS_15() throws InterruptedException {
         //click +New button 1
@@ -270,6 +277,8 @@ public class Alia_287784 {
         System.out.println("Test Case for Edit Successful");
     }
 
+
+    //Test case for Delete Authorized Staff (1)
     @Test
     public void FIMS_16() throws InterruptedException {
         //click +New button 1
@@ -329,9 +338,11 @@ public class Alia_287784 {
         System.out.println("Test Case for delete successful");
     }
 
+
+    //Test case for Number of Rows function for Authorized Staff (1)
     @Test
     public void FIMS_17() throws InterruptedException {
-        //click edit button (AUTS10800/508/24)
+        //click edit button (AUTS10800/517/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -364,9 +375,11 @@ public class Alia_287784 {
         System.out.println("Test Case for display 10 rows successful");
     }
 
+
+    //Test case for Number of Rows function for Authorized Staff (2)
     @Test
     public void FIMS_18() throws InterruptedException {
-        //click edit button (AUTS10800/508/24)
+        //click edit button (AUTS10800/517/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -399,9 +412,11 @@ public class Alia_287784 {
         System.out.println("Test Case for display 25 rows successful");
     }
 
+
+    //Test case for Number of Rows function for Authorized Staff (3)
     @Test
     public void FIMS_19() throws InterruptedException {
-        //click edit button (AUTS10800/508/24)
+        //click edit button (AUTS10800/517/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -434,9 +449,11 @@ public class Alia_287784 {
         System.out.println("Test Case for display 50 rows successful");
     }
 
+
+    //Test case for Number of Rows function for Authorized Staff (4)
     @Test
     public void FIMS_20() throws InterruptedException {
-        //click edit button (AUTS10800/508/24)
+        //click edit button (AUTS10800/517/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
