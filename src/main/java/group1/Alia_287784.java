@@ -134,7 +134,7 @@ public class Alia_287784 {
 
     @Test
     public void FIMS_13() throws InterruptedException {
-        //click edit button (AUTS10800/475/24)
+        //click edit button (AUTS10800/499/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -165,7 +165,7 @@ public class Alia_287784 {
 
     @Test
     public void FIMS_14() throws InterruptedException {
-        //click edit button (AUTS10800/475/24)
+        //click edit button (AUTS10800/499/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -331,7 +331,7 @@ public class Alia_287784 {
 
     @Test
     public void FIMS_17() throws InterruptedException {
-        //click edit button (AUTS10800/475/24)
+        //click edit button (AUTS10800/499/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -366,7 +366,7 @@ public class Alia_287784 {
 
     @Test
     public void FIMS_18() throws InterruptedException {
-        //click edit button (AUTS10800/475/24)
+        //click edit button (AUTS10800/499/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -401,7 +401,7 @@ public class Alia_287784 {
 
     @Test
     public void FIMS_19() throws InterruptedException {
-        //click edit button (AUTS10800/475/24)
+        //click edit button (AUTS10800/499/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
@@ -436,7 +436,7 @@ public class Alia_287784 {
 
     @Test
     public void FIMS_20() throws InterruptedException {
-        //click edit button (AUTS10800/475/24)
+        //click edit button (AUTS10800/499/24)
         driver.findElement(By.xpath("/html/body/div[4]/form/div/div[1]/div[2]/div[3]/table/tbody/tr[1]/td[9]/a[2]")).click();
         Thread.sleep(1000);
 
