@@ -1,42 +1,33 @@
 package group1;
 
-import static org.junit.Assert.assertTrue;
-
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.regex.Pattern;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class Farhana_284586 {
+    static ChromeDriver driver = new ChromeDriver();
 
-    static WebDriver driver; // Declaring WebDriver instance
-
-    /* Before class, open edge browser,
-    ** locate the FIMS website and login using ENTRY1 and password qwertyuiop
-    */
     @BeforeClass
     public static void beforeClass() throws InterruptedException {
-
         System.out.println("Before Class");
-        System.setProperty("webdriver.edge.driver", "C:\\Users\\User\\Desktop\\SOFTWARE TESTING\\PROJECT\\EdgeDriver\\msedgedriver.exe");
-        driver = new EdgeDriver(); // Initialize WebDriver
+        System.setProperty("webdriver.chrome.driver", "C:\\Selenium webdriver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 
-        driver.get("https://fimsclone.kerisi.my/");
+        driver.manage().window().maximize();
+
+        driver.get("https://fimsclone.kerisi.my/"); // Open website
         System.out.println(driver.getTitle());
         Thread.sleep(2000);
 
@@ -56,8 +47,8 @@ public class Farhana_284586 {
 
 
     /* Before each test cases, navigate to the menu:
-    ** Menu > Portal > Stock Application
-    */
+     ** Menu > Portal > Stock Application
+     */
     @Before
     public void before() throws InterruptedException {
         System.out.println("\nBefore Test Case");
@@ -84,8 +75,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 1 : FIMS_41 : Insert Store Field
-    ** Menu > Portal > Stock Application > New Application
-    */
+     ** Menu > Portal > Stock Application > New Application
+     */
     //@Ignore
     @Test
     public void FIMS_41() throws InterruptedException {
@@ -137,8 +128,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 2 : FIMS_42 : Insert Store Field with No Input
-    ** Menu > Portal > Stock Application > New Application
-    */
+     ** Menu > Portal > Stock Application > New Application
+     */
     //@Ignore
     @Test
     public void FIMS_42() throws InterruptedException {
@@ -174,8 +165,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 3 : FIMS_43 : Add New Item to Store
-    ** Menu > Portal > Stock Application > New Application
-    */
+     ** Menu > Portal > Stock Application > New Application
+     */
     //@Ignore
     @Test
     public void FIMS_43() throws InterruptedException {
@@ -268,8 +259,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 4 : FIMS_44 : Add New Item to Store with No Input
-    ** Menu > Portal > Stock Application > New Application
-    */
+     ** Menu > Portal > Stock Application > New Application
+     */
     //@Ignore
     @Test
     public void FIMS_44() throws InterruptedException {
@@ -335,8 +326,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 5 : FIMS_45 : Search Item
-    ** Menu > Portal > Stock Application > New Application
-    */
+     ** Menu > Portal > Stock Application > New Application
+     */
     //@Ignore
     @Test
     public void FIMS_45() throws InterruptedException {
@@ -399,8 +390,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 6 : FIMS_46 : Edit Store Item
-    ** Menu > Portal > Stock Application > New Application
-    */
+     ** Menu > Portal > Stock Application > New Application
+     */
     //@Ignore
     @Test
     public void FIMS_46() throws InterruptedException {
@@ -493,8 +484,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 7 : FIMS_47 : Delete Store Item
-    ** Menu > Portal > Stock Application > New Application
-    */
+     ** Menu > Portal > Stock Application > New Application
+     */
     //@Ignore
     @Test
     public void FIMS_47() throws InterruptedException {
@@ -560,8 +551,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 8 : FIMS_48 : Save and Submit Store Item
-    ** Menu > Portal > Stock Application > New Application
-    */
+     ** Menu > Portal > Stock Application > New Application
+     */
     //@Ignore
     @Test
     public void FIMS_48() throws InterruptedException {
@@ -652,11 +643,12 @@ public class Farhana_284586 {
         // Click Ok button
         driver.findElement(By.xpath("/html/body/div[18]/div/div/div[3]/button[2]")).click();
         System.out.println("Click Ok button");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         // Extract text from the modal-body element
         String modalText = driver.findElement(By.cssSelector("#modalAlert > div > div > div.modal-body")).getText();
         ///html/body/div[18]/div/div/div[2]
+        Thread.sleep(2000);
 
         // Split the text based on the period (.)
         String[] message = modalText.split("\\.");
@@ -685,8 +677,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 9 : FIMS_49 : Save and Submit Store Item with No Item
-    ** Menu > Portal > Stock Application > New Application
-    */
+     ** Menu > Portal > Stock Application > New Application
+     */
     //@Ignore
     @Test
     public void FIMS_49() throws InterruptedException {
@@ -747,8 +739,8 @@ public class Farhana_284586 {
 
 
     /* Test Case 10 : FIMS_50 : View Store Item and Application Details
-    ** Menu > Portal > Stock Application > List of Application
-    */
+     ** Menu > Portal > Stock Application > List of Application
+     */
     //@Ignore
     @Test
     public void FIMS_50() throws InterruptedException {

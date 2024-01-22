@@ -79,42 +79,39 @@ public class Nissaa281866{
     }
 	
 	@Test
-    public void FIMS_02 () throws InterruptedException {
-		
-        
-        // Click Arrow button
-        driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/back")).click();
-        Thread.sleep(1000);
-        
-       // Navigate to "portal" page (assuming it's a link)
-        driver.findElement(By.linkText("Portal")).click();
-        Thread.sleep(1000);
+	public void FIMS_02() throws InterruptedException {
+	    // Click Arrow button
+	    driver.findElement(By.xpath("//*[@id=\"breadcrumbs\"]/back")).click();
+	    Thread.sleep(1000);
 
-        // Navigate to "Authorized Receipting" page (assuming it's a link)
-        driver.findElement(By.linkText("Payslip")).click();
-        Thread.sleep(1000);
-        
+	    // Navigate to "portal" page (assuming it's a link)
+	    driver.findElement(By.linkText("Portal")).click();
+	    Thread.sleep(1000);
 
-        System.out.println("Test nav button code Pass");
-        Thread.sleep(4000);
-        
-        try {
-            // Get Text From Page
-            WebElement anyEmptyCell = driver.findElement(By.cssSelector("td.dataTables_empty"));
-            String actualText = anyEmptyCell.getText();
+	    // Navigate to "Authorized Receipting" page (assuming it's a link)
+	    driver.findElement(By.linkText("Payslip")).click();
+	    Thread.sleep(1000);
 
-            // Expected Text
-            String expectedText = "No records";
+	    System.out.println("Test nav button code Pass");
+	    Thread.sleep(4000);
 
-            // Assert that the "No records" message is present anywhere on the page
-            Assert.assertEquals("Page content does not match", expectedText, actualText);
-            System.out.println("Test nav button code Pass");
-        } catch (Exception e) {
-            e.printStackTrace();
-            Assert.fail("Entire page search test failed: " + e.getMessage());
-        }
-    }
-	
+	    try {
+	        // Get Text From Page
+	        WebElement anyEmptyCell = driver.findElement(By.cssSelector("td.dataTables_empty"));
+	        String actualText = anyEmptyCell.getText();
+
+	        // Expected Text
+	        String expectedText = "No records";
+
+	        // Assert that the "No records" message is present anywhere on the page
+	        Assert.assertEquals("Page content does not match", expectedText, actualText);
+	        System.out.println("Test Case for nav button is Valid");
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        Assert.fail("Entire page search test failed: " + e.getMessage());
+	    }
+	}
+
 	@Test
     public void FIMS_03 () throws InterruptedException {
 		
@@ -436,7 +433,7 @@ public class Nissaa281866{
 
             // Assert that the "No records" message is present anywhere on the page
             Assert.assertEquals("Page content does not match", expectedText, actualText);
-            System.out.println("Test Case for random purpose is Valid");
+            System.out.println("Test Case for no purpose is Valid");
         } catch (Exception e) {
             e.printStackTrace();
             Assert.fail("Entire page search test failed: " + e.getMessage());
@@ -487,11 +484,22 @@ public class Nissaa281866{
 
             // Assert that the "No records" message is present anywhere on the page
             Assert.assertEquals("Page content does not match", expectedText, actualText);
-            System.out.println("Test Case for random purpose is Valid");
+            System.out.println("Test Case for delete is Valid");
         } catch (Exception e) {
             e.printStackTrace();
             Assert.fail("Entire page search test failed: " + e.getMessage());
         }
     }
 	
+	
+	@After
+    public void afterTest() {
+        // Close the WebDriver after each test case
+        if (driver != null) {
+            driver.quit();
 }
+	}
+}
+        
+        
+        
