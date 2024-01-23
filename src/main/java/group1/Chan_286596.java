@@ -76,7 +76,7 @@ public class Chan_286596 {
                 Thread.sleep(2000);
             }
 
-            // Click on the "OK" button (Assuming it's a button, please update the selector accordingly)
+            // Click on the "OK" button
             driver.findElement(By.cssSelector("button.btn.btn-primary[data-dismiss='modal']")).click();
             Thread.sleep(3000);
 
@@ -125,7 +125,7 @@ public class Chan_286596 {
                 Thread.sleep(2000);
             }
 
-            // Click on the "OK" button (Assuming it's a button, please update the selector accordingly)
+            // Click on the "OK" button
             driver.findElement(By.cssSelector("button.btn.btn-primary[data-dismiss='modal']")).click();
             Thread.sleep(2000);
 
@@ -172,7 +172,7 @@ public class Chan_286596 {
                 Thread.sleep(1000);
             }
 
-            // Click on the "OK" button (Assuming it's a button, please update the selector accordingly)
+            // Click on the "OK" button
             driver.findElement(By.cssSelector("button.btn.btn-primary[data-dismiss='modal']")).click();
             Thread.sleep(2000);
 
@@ -219,7 +219,7 @@ public class Chan_286596 {
                 Thread.sleep(1000);
             }
 
-            // Click on the "OK" button (Assuming it's a button, please update the selector accordingly)
+            // Click on the "OK" button
             driver.findElement(By.cssSelector("button.btn.btn-primary[data-dismiss='modal']")).click();
             Thread.sleep(2000);
 
@@ -237,7 +237,7 @@ public class Chan_286596 {
                 System.out.println("Test smart filter for search by PTJ types is Valid");
             } catch (Exception e) {
                 e.printStackTrace();
-                Assert.fail("Entire page search test 2 failed: " + e.getMessage());
+                Assert.fail("Entire page search test  failed: " + e.getMessage());
             }
         }
 
@@ -328,7 +328,7 @@ public class Chan_286596 {
         driver.findElement(By.xpath("//li[contains(text(), 'ENTRY')]")).click();
         Thread.sleep(1000);
 
-        // Click on the "OK" button (Assuming it's a button, please update the selector accordingly)
+        // Click on the "OK" button
         driver.findElement(By.cssSelector("button.btn.btn-primary[data-dismiss='modal']")).click();
         Thread.sleep(2000);
 
@@ -340,7 +340,7 @@ public class Chan_286596 {
         driver.findElement(By.cssSelector("button.btn.btn-danger")).click();
         Thread.sleep(2000);
 
-        // Click on the "OK" button (Assuming it's a button, please update the selector accordingly)
+        // Click on the "OK" button
         driver.findElement(By.cssSelector("button.btn.btn-primary[data-dismiss='modal']")).click();
         Thread.sleep(2000);
 
