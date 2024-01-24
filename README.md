@@ -1,15 +1,15 @@
-Software Testing & Quality Assurance Group Project
+##Software Testing & Quality Assurance Group Project
 
-Group 1
+<h3>Group 1</h3>
 
-Group Members:
+<h3>Group Members:</h3>
 
-Abdulrahman Khalif Hashi Nur (274922)
-Nissaa A/P Eh Plen (281866)
-Nur Farhana Binti Shahul Hameed (284586)
-Chan Jing Mei (286596)
-Nur 'Alia Nabilah Binti Noor Azam (287784)
+<br>Abdulrahman Khalif Hashi Nur (274922)
+<br>Nissaa A/P Eh Plen (281866)
+<br>Nur Farhana Binti Shahul Hameed (284586)
+<br>Chan Jing Mei (286596)
+<br>Nur 'Alia Nabilah Binti Noor Azam (287784)
 
 
-IDE used for Project: IntelliJ IDEA
+<br>IDE used for Project: IntelliJ IDEA
 
