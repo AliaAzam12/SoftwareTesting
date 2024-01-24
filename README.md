@@ -1,7 +1,6 @@
-#Software Testing & Quality Assurance Group Project
+<h1>Software Testing & Quality Assurance Group Project</h1>
 
 <h3>Group 1</h3>
-
 <h3>Group Members:</h3>
 
 <br>Abdulrahman Khalif Hashi Nur (274922)<br>
